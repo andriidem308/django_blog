@@ -75,7 +75,7 @@ headers:
 
 GET http://127.0.0.1:8000/api/analytics?date_from=2023-03-03&date_to=2023-04-03
 
-**10. Run bot which creates users, their posts and likes some posts**
+**10. Run bot which creates users, their posts and likes some posts with configuration written in <i>bot_config.yml</i>**
 
 GET http://127.0.0.1:8000/api/bot_run
 

@@ -24,8 +24,8 @@ class PostViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
 
     @action(methods=['POST'], detail=True)
-    def like_post(self, request, pk=None):
-        result_response = {'message': 'Something goes wrong'}
+    def post_like(self, request, pk=None):
+        result_response = {'message': 'Cannot like this post'}
 
         if request.user.is_authenticated:
             user = request.user
@@ -38,8 +38,8 @@ class PostViewSet(viewsets.ModelViewSet):
         return Response(result_response)
 
     @action(methods=['POST'], detail=True)
-    def unlike_post(self, request, pk=None):
-        result_response = {'message': 'Something goes wrong'}
+    def post_unlike(self, request, pk=None):
+        result_response = {'message': 'Cannot unlike this post'}
 
         if request.user.is_authenticated:
             user = request.user
